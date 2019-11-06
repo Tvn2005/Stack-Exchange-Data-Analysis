@@ -1,6 +1,27 @@
 # Stack-Exchange-Data-Analysis
 Stack Exchange Data Analysis on Google Cloud Platform(Using Pig,Hive,hadoop and TFIDF by MapReduce)
 
+# Queries to Exctract Dataset from Stack Exchange site
+
+select * from posts where posts.ViewCount>100000 order by posts.ViewCount desc;
+#Output rows:47454
+
+select * from posts where posts.ViewCount>57850
+and posts.ViewCount <= 100000 order by posts.ViewCount desc;
+#Output Rows:49908
+
+select * from posts where posts.ViewCount>41175
+and posts.ViewCount <= 57850 order by posts.ViewCount desc;
+#Output Rows:49914
+
+select * from posts where posts.ViewCount>32030
+and posts.ViewCount <= 41175 order by posts.ViewCount desc;
+#Output Rows:49838
+
+select * from posts where posts.ViewCount>30000
+and posts.ViewCount <= 32030 order by posts.ViewCount desc;
+#Output Rows:15170(Out of which 2886 rows were taken to consider 200000 records)
+
 # To Display all the uploaded files in GCP:
 ls
 
