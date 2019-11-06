@@ -26,7 +26,7 @@ and posts.ViewCount <= 32030 order by posts.ViewCount desc;
 ls
 
 # To upload files on Hadoop:
-hadoop fs -ls QueryResults*  /
+hadoop fs -put QueryResults*  /
 
 # In Pig:
 REGISTER /usr/lib/pig/piggybank.jar
